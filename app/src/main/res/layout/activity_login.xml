@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tayoo"
+    android:alpha="0.8"
+    android:background="@drawable/tayorill"
     android:gravity="center"
     android:orientation="vertical"
     android:textSize="34sp"
@@ -21,10 +22,10 @@
     <TextView
         android:id="@+id/RegisterAccount"
         android:layout_width="match_parent"
-        android:layout_height="142dp"
+        android:layout_height="118dp"
+        android:fontFamily="@font/helvetica"
         android:gravity="center"
         android:text="Real JBUS \n Welcome"
-        android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
         android:textSize="50sp">
 
@@ -40,7 +41,7 @@
 
 
         <EditText
-            android:id="@+id/Email"
+            android:id="@+id/Balance"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="15sp"
@@ -50,8 +51,8 @@
             android:drawablePadding="5dp"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:textColor="@color/black"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/Password"
@@ -64,8 +65,8 @@
             android:drawablePadding="5dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColor="@color/black"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/Register"
@@ -92,9 +93,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Sign Up"
-            android:textColor="#ff7f00"
-            android:textAllCaps="false"
             android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#ff7f00"
             android:textStyle="bold" />
 
     </LinearLayout>

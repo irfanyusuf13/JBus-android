@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tayoo"
+    android:background="@drawable/tayorill"
+    android:alpha="0.8"
     android:gravity="center"
     android:orientation="vertical"
     android:textSize="34sp"
@@ -45,10 +46,10 @@
         android:id="@+id/RegisterPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginHorizontal="15dp"
         android:orientation="vertical"
-        android:padding="30dp"
-        android:layout_gravity="left">
+        android:padding="30dp">
 
 
         <EditText
@@ -66,7 +67,7 @@
             android:textColor="@color/black" />
 
         <EditText
-            android:id="@+id/Email"
+            android:id="@+id/Balance"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="15sp"
@@ -76,8 +77,8 @@
             android:drawablePadding="5dp"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:textColor="@color/black"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/Password"
@@ -90,8 +91,8 @@
             android:drawablePadding="5dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColor="@color/black"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/Register"
