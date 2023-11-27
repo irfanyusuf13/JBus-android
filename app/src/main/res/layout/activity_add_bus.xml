@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".AddBusActivity">
+
+    <TextView
+        android:id="@+id/AddBus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:fontFamily="@font/helvetica"
+        android:text="  Add Bus "
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:fontFamily="@font/helvetica"
+        android:text="   Add or edit your bus "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        tools:ignore="TextSizeCheck" />
+
+    <LinearLayout
+        android:layout_width="358sp"
+        android:layout_height="250sp"
+        android:layout_gravity="left"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <EditText
+            android:id="@+id/BusName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:drawablePadding="5dp"
+            android:hint="  Bus Name"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/CapacityBus"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:drawablePadding="5dp"
+            android:hint="  Capacity"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/PriceBus"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:drawablePadding="5dp"
+            android:hint="  Price"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText,TextFields" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="3dp"
+        android:layout_marginBottom="9dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="Bus Type"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_directions_bus_24"
+            app:tint="@color/black" />
+        <Spinner
+            android:id="@+id/bus_type_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="3dp"
+        android:layout_marginBottom="9dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="Departure"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_home_24"
+            app:tint="@color/black" />
+        <Spinner
+            android:id="@+id/departure_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="3dp"
+        android:layout_marginBottom="9dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="Arrival"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_forward_24"
+            app:tint="@color/black" />
+        <Spinner
+            android:id="@+id/arrival_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="3dp"
+        android:layout_marginBottom="9dp">
+        <TextView
+            android:id="@+id/FacilitiesBus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/helvetica"
+            android:text="  Facilities "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left">
+
+        <CheckBox
+            android:id="@+id/FacilitasAc"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:text="AC"
+            tools:ignore="TouchTargetSizeCheck" />
+        <CheckBox
+            android:id="@+id/FacilitasWiFi"
+            android:layout_width="150dp"
+            android:layout_height="30sp"
+            android:layout_gravity="left"
+            android:text="WiFi"
+            tools:ignore="TouchTargetSizeCheck"/>
+        <CheckBox
+        android:id="@+id/FacilitasToilet"
+            android:layout_width="150dp"
+            android:layout_height="30sp"
+            android:layout_gravity="left"
+            android:text="Toilet"
+            tools:ignore="TouchTargetSizeCheck"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left">
+
+        <CheckBox
+            android:id="@+id/FacilitasLCDTv"
+            android:layout_width="150dp"
+            android:layout_height="30sp"
+            android:layout_gravity="left"
+            android:text="LCD TV"
+            tools:ignore="TouchTargetSizeCheck"/>
+        <CheckBox
+            android:id="@+id/FacilitasCoolBox"
+            android:layout_width="150dp"
+            android:layout_height="30sp"
+            android:layout_gravity="left"
+            android:text="CoolBox"
+            tools:ignore="TouchTargetSizeCheck"/>
+        <CheckBox
+            android:id="@+id/FacilitasLunch"
+            android:layout_width="150dp"
+            android:layout_height="30sp"
+            android:layout_gravity="left"
+            android:text="Lunch"
+            tools:ignore="TouchTargetSizeCheck"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left">
+
+        <CheckBox
+            android:id="@+id/FacilitasLargeBaggage"
+            android:layout_width="150dp"
+            android:layout_height="30sp"
+            android:layout_gravity="left"
+            android:text="Large Baggage"
+            tools:ignore="TouchTargetSizeCheck"/>
+        <CheckBox
+            android:id="@+id/FacilitasElectricSocket"
+            android:layout_width="150dp"
+            android:layout_height="30sp"
+            android:layout_gravity="left"
+            android:text="Electric Socket"
+            tools:ignore="TouchTargetSizeCheck"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/AddButtonBis"
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ff7f00"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:cornerRadius="30dp"/>
+
+    </LinearLayout>
+    </LinearLayout>

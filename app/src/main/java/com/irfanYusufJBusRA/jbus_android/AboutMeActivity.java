@@ -53,6 +53,36 @@ public class AboutMeActivity extends AppCompatActivity {
         topUpAmount = findViewById(R.id.Number);
         topUpButton = findViewById(R.id.button);
         topUpButton.setOnClickListener(v -> handleTopUp());
+
+        if (LoginActivity.loggedAccount.company != null) {
+            TextView textView = findViewById(R.id.status);
+            textView.setText("You're Already Registered as a Renter");
+
+            TextView registerRenter = findViewById(R.id.companyRegister);
+            registerRenter.setVisibility(View.GONE);
+
+
+            Button manageBusButton = findViewById(R.id.anotherButton);
+            manageBusButton.setOnClickListener(v -> {moveActivity(mContext, ManageBusActivity.class);
+            });
+        } else {
+            TextView textView = findViewById(R.id.status);
+            textView.setText("You're Not Registered as a Renter");
+
+            Button manageBusButton = findViewById(R.id.anotherButton);
+            manageBusButton.setVisibility(View.GONE);
+
+            TextView registerCompany = findViewById(R.id.companyRegister);
+            registerCompany.setOnClickListener(v -> {moveActivity(mContext, RegisterRenterActivity.class);
+            });
+        }
+
+
+
+    }
+    private void moveActivity(Context ctx, Class<?> cls) {
+        Intent intent = new Intent(ctx, cls);
+        startActivity(intent);
     }
 
     protected void handleTopUp(){

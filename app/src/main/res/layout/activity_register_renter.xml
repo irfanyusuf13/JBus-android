@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tayoo"
+    android:alpha="0.8"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:textSize="34sp"
+    tools:context=".RegisterRenterActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp" />
+
+    <TextView
+        android:id="@+id/RegisterCompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:fontFamily="@font/helvetica"
+        android:text="  Register Your Company "
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:fontFamily="@font/helvetica"
+        android:text="   Input company name, address , and phonenumber"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        tools:ignore="TextSizeCheck" />
+
+    <LinearLayout
+        android:id="@+id/RegisterCompanyPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+
+        <EditText
+            android:id="@+id/CompanyName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="20sp"
+            android:background="@drawable/custom"
+            android:drawableLeft="@drawable/baseline_3p_24"
+            android:drawablePadding="5dp"
+            android:hint="Company Name"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/AddressCompany"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="20sp"
+            android:background="@drawable/custom"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="5dp"
+            android:hint="Address"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/PhoneNumberCompany"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="20sp"
+            android:background="@drawable/custom"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="5dp"
+            android:hint="PhoneNumber"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText,TextFields" />
+        <Button
+            android:id="@+id/registerCompanyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ff7f00"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:cornerRadius="30dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</LinearLayout>
