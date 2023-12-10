@@ -22,13 +22,19 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+
+/**
+ * an activity that contains information of user.
+ * @author Irfan Yusuf
+ */
+
 public class AboutMeActivity extends AppCompatActivity {
 
     TextView isiDariEmail = null;
     TextView isiDariUser = null;
-   TextView isiDariBalance = null;
+    TextView isiDariBalance = null;
 
-   private EditText topUpAmount;
+    private EditText topUpAmount;
 
     private BaseApiService mApiService;
     private Context mContext;
@@ -53,6 +59,17 @@ public class AboutMeActivity extends AppCompatActivity {
         topUpAmount = findViewById(R.id.Number);
         topUpButton = findViewById(R.id.button);
         topUpButton.setOnClickListener(v -> handleTopUp());
+
+
+        /**
+         * this is used for user to register as renter.
+         * if the account already registered as renter
+         * then there will be button and if it clicked
+         * user will move to manage bus activity
+         * if account is not registered as renter
+         * user will move to register renter activity
+         * @author Irfan Yusuf
+         */
 
         if (LoginActivity.loggedAccount.company != null) {
             TextView textView = findViewById(R.id.status);
@@ -84,7 +101,10 @@ public class AboutMeActivity extends AppCompatActivity {
         Intent intent = new Intent(ctx, cls);
         startActivity(intent);
     }
-
+    /**
+     * this method is used to handle the Topup from user.
+     * @author Irfan Yusuf
+     */
     protected void handleTopUp(){
         String topUpAmountS = topUpAmount.getText().toString();
         if (topUpAmountS.isEmpty()) {
@@ -95,13 +115,13 @@ public class AboutMeActivity extends AppCompatActivity {
         mApiService.topUp(loggedAccount.id, topUpD).enqueue(new Callback<BaseResponse<Double>>() {
             @Override
             public void onResponse(Call<BaseResponse<Double>> call, Response<BaseResponse<Double>> response) {
-                // handle the potential 4xx & 5xx error
+
                 if (!response.isSuccessful()) {
                     Toast.makeText(mContext, "Application error " + response.code(), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 BaseResponse<Double> res = response.body();
-                // if success finish this activity
+
                 if (res.success){
                     finish();
                     loggedAccount.balance += res.payload;

@@ -18,6 +18,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * an activity to user make an account / register account
+ * @author Irfan Yusuf
+ */
 public class RegisterActivity extends AppCompatActivity {
 
     private BaseApiService mApiService;
@@ -40,6 +44,14 @@ public class RegisterActivity extends AppCompatActivity {
 
         registerButton.setOnClickListener(v -> handleRegister());
     }
+
+    /**
+     * this method is used to handleregiter the login from user.
+     * if the password / email / name is empty user cannot regis
+     * if the password / email is not matched with regex user cannot regis
+     * if register success, user will back to login activity
+     * @author Irfan Yusuf
+     */
 
     protected void handleRegister(){
         String nameS = name.getText().toString();

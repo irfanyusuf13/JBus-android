@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:alpha="0.8"
-    android:background="@drawable/tayorill"
+    android:background="@drawable/bislogin"
     android:gravity="center"
     android:orientation="vertical"
     android:textSize="34sp"
+    android:drawableTop="@drawable/tayo"
+
     tools:context=".LoginActivity">
 
     <androidx.cardview.widget.CardView
@@ -25,7 +27,6 @@
         android:layout_height="118dp"
         android:fontFamily="@font/helvetica"
         android:gravity="center"
-        android:text="Real JBUS \n Welcome"
         android:textColor="@color/black"
         android:textSize="50sp">
 

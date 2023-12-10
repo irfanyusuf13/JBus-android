@@ -24,6 +24,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * an activity to user register account as renter
+ * @author Irfan Yusuf
+ */
 public class RegisterRenterActivity extends AppCompatActivity {
 
     private Context mContext;
@@ -56,6 +60,13 @@ public class RegisterRenterActivity extends AppCompatActivity {
         Intent intent = new Intent(ctx, cls);
         startActivity(intent);
     }
+
+    /**
+     * this method is used to handleregiterCompany the login from user.
+     * if the companyname / address / phonenumber is empty user cannot regis
+     * if register success, user will back to aboutmeactvity
+     * @author Irfan Yusuf
+     */
 
     protected void handleRegisterCompany(){
         String companyNew = companyName.getText().toString();

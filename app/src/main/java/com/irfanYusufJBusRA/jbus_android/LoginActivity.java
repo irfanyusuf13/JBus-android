@@ -21,6 +21,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * an activity for user to login with an account user has made.
+ * if the password / email is false user cannot login
+ * @author Irfan Yusuf
+ */
+
 public class LoginActivity extends AppCompatActivity {
 
     private TextView signUp = null;
@@ -63,6 +69,14 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(ctx, message, Toast.LENGTH_SHORT).show();
     }
 
+
+    /**
+     * this method is used to handle the login from user.
+     * if the password / email is false user cannot login
+     * if the password and email is true user can login
+     * if user login , user will move to main activity
+     * @author Irfan Yusuf
+     */
     protected void handleLogin() {
         String emailNew = email.getText().toString();
         String passwordNew = password.getText().toString();

@@ -13,6 +13,11 @@ import androidx.annotation.Nullable;
 import com.irfanYusufJBusRA.jbus_android.model.Bus;
 import java.util.List;
 
+/**
+ * an activity to create bus array adapter for bus view xml.
+ * @author Irfan Yusuf
+ */
+
 public class BusArrayAdapter extends ArrayAdapter<Bus> {
 
     private Context context;
